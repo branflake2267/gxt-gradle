@@ -2,4 +2,4 @@
 
 ## Build
 
-* Runt `gradle build`
+* Run `gradle build`
