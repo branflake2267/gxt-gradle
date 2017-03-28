@@ -1,0 +1,49 @@
+// http://steffenschaefer.github.io/gwt-gradle-plugin/doc/latest/
+
+apply plugin: 'war'
+apply plugin: 'gwt'
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+    }
+    
+    dependencies {
+        classpath 'de.richsource.gradle.plugins:gwt-gradle-plugin:0.6'
+    }
+}
+
+repositories {
+	maven {
+	    name "sencha-gxt-repository"
+        url "https://maven.sencha.com/repo/gxt-support-commercial-release"
+    }
+    
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+	compile 'com.sencha.gxt:gxt:4.0.2'
+	compile 'com.sencha.gxt:gxt-themebuilder:4.0.2'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main/java'
+            srcDirs 'src/main/theme'
+        }
+    }
+ }
+
+gwt {
+    gwtVersion='2.7.0'
+    modules 'tld.domain.project.Project'
+    
+    superDev {
+		noPrecompile=true
+	}
+}

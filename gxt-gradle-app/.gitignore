@@ -1,0 +1,12 @@
+/.gradle/
+gradle/
+/build/
+
+.project
+.settings
+.classpath
+gwt-unitCache
+
+#workarounds
+src/main/webapp/WEB-INF/lib
+war
