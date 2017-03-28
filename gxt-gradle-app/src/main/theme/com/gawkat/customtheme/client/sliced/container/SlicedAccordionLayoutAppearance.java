@@ -37,15 +37,15 @@
  */
 package com.gawkat.customtheme.client.sliced.container;
 
-import com.google.gwt.core.shared.GWT;
-import com.google.gwt.resources.client.ImageResource;
-import com.google.gwt.resources.client.ImageResource.ImageOptions;
-import com.google.gwt.resources.client.ImageResource.RepeatStyle;
 import com.gawkat.customtheme.client.base.container.Css3AccordionLayoutAppearance.Css3AccordionHeaderResources;
 import com.gawkat.customtheme.client.base.panel.Css3HeaderAppearance;
 import com.gawkat.customtheme.client.base.panel.Css3HeaderAppearance.Css3HeaderResources;
 import com.gawkat.customtheme.client.base.panel.Css3HeaderAppearance.Css3HeaderStyle;
 import com.gawkat.customtheme.client.sliced.panel.SlicedContentPanelAppearance;
+import com.google.gwt.core.shared.GWT;
+import com.google.gwt.resources.client.ImageResource;
+import com.google.gwt.resources.client.ImageResource.ImageOptions;
+import com.google.gwt.resources.client.ImageResource.RepeatStyle;
 import com.sencha.gxt.widget.core.client.Header.HeaderAppearance;
 import com.sencha.gxt.widget.core.client.button.IconButton.IconConfig;
 import com.sencha.gxt.widget.core.client.button.ToolButton;
@@ -72,7 +72,7 @@ public class SlicedAccordionLayoutAppearance extends SlicedContentPanelAppearanc
     ImageResource headerBackground();
 
     @Override
-    @Source({"com/sencha/gxt/theme/base/client/widget/Header.gss", "SlicedAccordionHeader.gss"})
+    @Source({"com/sencha/gxt/theme/base/client/widget/Header.gss"})
     SlicedAccordionHeaderStyle style();
   }
   public interface SlicedAccordionHeaderStyle extends Css3HeaderStyle {
