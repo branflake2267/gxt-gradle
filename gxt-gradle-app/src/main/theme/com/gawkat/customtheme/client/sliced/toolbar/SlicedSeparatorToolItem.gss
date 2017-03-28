@@ -1,0 +1,4 @@
+
+.separator {
+  gwt-sprite: "separator";
+}

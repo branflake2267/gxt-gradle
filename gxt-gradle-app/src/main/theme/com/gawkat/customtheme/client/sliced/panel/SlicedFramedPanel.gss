@@ -1,0 +1,29 @@
+@def BACKGROUND_COLOR value('theme.panel.backgroundColor');
+
+.panel {
+  border-style: solid;
+  border-width: 0;
+  outline: 0 none;
+}
+
+.noHeader {
+  border-top-width: 1px;
+}
+
+.header {
+  position: relative;
+}
+
+.body {
+  border-width: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: BACKGROUND_COLOR;
+}
+
+.footer {
+  position: relative;
+}
+
+.bodyWrap {
+}

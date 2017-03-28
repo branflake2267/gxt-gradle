@@ -1,0 +1,24 @@
+@def BORDER_COLOR value('theme.toolbar.separatorBorder.color');
+@def BORDER_WIDTH value('theme.toolbar.separatorBorder.toString');
+@def BORDER_STYLE value('theme.toolbar.separatorBorder.style');
+@def GRADIENT value('theme.toolbar.gradient');
+@def HEIGHT value('theme.toolbar.separatorHeight', 'px');
+
+.separator {
+  border-style: BORDER_STYLE;
+  border-color: BORDER_COLOR;
+  border-width: BORDER_WIDTH;
+  cursor: default;
+  display: inline-block;
+  height: HEIGHT;
+  width: 2px;
+  overflow: hidden;
+}
+
+@if (is("gxt.css3.enabled", "true")) {
+  .separator {
+    background: -webkit-linear-gradient(left, GRADIENT);
+    /* @alternate */ background: -ms-linear-gradient(left, GRADIENT);
+    /* @alternate */ background: linear-gradient(to right, GRADIENT);
+  }
+}
